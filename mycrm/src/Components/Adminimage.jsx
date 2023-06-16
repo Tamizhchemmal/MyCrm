@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import img from "../Images/admin.jpg";
 import refimg from '../Images/ref.jpg'
 
@@ -8,14 +8,17 @@ function Adminimage(props) {
 
     const [style,setStyle]=useState();
     const [styleref,setStyleref]=useState();
-    // if(acess=="admin"){
-    //     setStyle();
-    //     setStyleref({
-    //         display:"none"
-    //     })
-    //  }else{
-
-    //  }
+    useEffect(()=>{
+      if(acess==="admin"){
+            setStyle();
+            setStyleref({
+                display:"block"
+            })
+         }else{
+    
+         }
+    })
+   
   return (
   
     <>
